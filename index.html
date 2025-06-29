@@ -50,36 +50,55 @@
     .user-item:hover img {
       transform: scale(1.05);
     }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      transform: scale(1.2);
+    }
+    
+    @media (max-width: 576px) {
+      .social-icon {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+      }
+    
+      .social-links {
+        gap: 1rem;
+      }
+    }
+    
   </style>
+  
+  
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between" style="background-color: #0563bb;">
+  <header id="header" class="header d-flex flex-column justify-content-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img loading="lazy" src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">MC Đăng Tình</h1>
-      </a>
+    <i class="header-toggle d-xl-none bi bi-list"></i>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Trang chủ</a></li>
-          <li><a href="#about">Giới thiệu</a></li>
-          <li><a href="#services">Thành tích</a></li>
-          <li><a href="#chuyenmon">Chuyên môn</a></li>
-          <li><a href="#events">Sự kiện</a></li>
-          <li><a href="#hinhanh">Hình ảnh</a></li>
-          <li><a href="#contact">Liên hệ</a></li>
-          <div></div>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Trang chủ</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span>Giới thiệu</span></a></li>
+        <li><a href="#services"><i class="bi bi-file-earmark-text navicon"></i><span>Thành tích</span></a></li>
+        <li><a href="#chuyenmon"><i class="bi bi-images navicon"></i><span>Chuyên môn</span></a></li>
+        <li><a href="#events"><i class="bi bi-hdd-stack navicon"></i><span>Sự kiện</span></a></li>
+        <li><a href="#hinhanh"><i class="bi bi-images navicon"></i><span>Hình ảnh</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
 
-    </div>
   </header>
+
 
   <main class="main">
 
@@ -92,9 +111,9 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 ">
             <h2>MC Đăng Tình</h2>
-            <p>Dẫn Chương Trình Chuyên Nghiệp cho <span class="typed" data-typed-items="Sự Kiện, Teambuilding, Kích Hoạt Thương Hiệu">Sự Kiện</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <p>Sự Kiện - Teambuilding - Kích Hoạt Thương Hiệu <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
-              <!-- <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <!-- <a href"#"><i class="bi bi-twitter-x"></i></a>
               <a href="#"><i class="bi bi-facebook"></i></a>
               <a href="#"><i class="bi bi-instagram"></i></a>
               <a href="#"><i class="bi bi-linkedin"></i></a> -->
@@ -138,8 +157,6 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Bằng cấp:</strong> <span>Cử nhân Trường Đại học Công nghiệp Hà Nội</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Bằng cấp:</strong> <span>Tốt nghiệp xuất sắc khóa MC Chuyên nghiệp - ST Lighthouse</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Chức vụ:</strong> <span>Nguyên Trưởng Ban Diễn Xuất - CLB Truyền thông và Giải trí WAA</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Chức vụ:</strong> <span>CTV Phòng Công tác Sinh viên - Trường Đại học Công nghiệp Hà Nội</span></li>
                 </ul>
               </div>
             </div>
@@ -386,11 +403,10 @@
 
       <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter=".filter-event" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Toàn bộ</li>
-            <li data-filter=".filter-event">Sự kiện</li>
+            <li data-filter=".filter-event" class="filter-active">Sự kiện</li>
             <li data-filter=".filter-brand">Thương hiệu</li>
             <li data-filter=".filter-tbd">Team building</li>
             <li data-filter=".filter-fes">Lễ hội</li>
@@ -407,15 +423,6 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-fes">
-              <img loading="lazy" src="assets/img/masonry-portfolio/lehoi/lh1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Lễ hội</h4>
-                <p>Lễ hội văn hóa "ĐÔNG GIAO MAY HỘI"</p>
-                <a href="assets/img/masonry-portfolio/lehoi/lh1.png" title="Lễ hội văn hóa 'ĐÔNG GIAO MAY HỘI'" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-event">
               <img loading="lazy" src="assets/img/masonry-portfolio/sukien/sk4.png" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -424,7 +431,46 @@
                 <a href="assets/img/masonry-portfolio/sukien/sk4.png" title="Chung kết cuộc thi ST Star" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
-
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-event">
+              <img loading="lazy" src="assets/img/masonry-portfolio/sukien/sk6.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Sự kiện</h4>
+                <p>Sắc màu hành trình đỏ</p>
+                <a href="assets/img/masonry-portfolio/sukien/sk6.png" title="Sắc màu hành trình đỏ" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-event">
+              <img loading="lazy" src="assets/img/masonry-portfolio/sukien/sk7.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Sự kiện</h4>
+                <p>Đấu giá nghệ thuật vì cộng đồng</p>
+                <a href="assets/img/masonry-portfolio/sukien/sk7.png" title="Đấu giá nghệ thuật vì cộng đồng" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-event">
+              <img loading="lazy" src="assets/img/masonry-portfolio/sukien/sk3.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Sự kiện</h4>
+                <p>Year End Party</p>
+                <a href="assets/img/masonry-portfolio/sukien/sk3.png" title="Year End Party" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-event">
+              <img loading="lazy" src="assets/img/masonry-portfolio/sukien/sk2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Sự kiện</h4>
+                <p>Year end party 2024</p>
+                <a href="assets/img/masonry-portfolio/sukien/sk2.png" title="Year end party 2024" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-fes">
+              <img loading="lazy" src="assets/img/masonry-portfolio/lehoi/lh1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Lễ hội</h4>
+                <p>Lễ hội văn hóa "ĐÔNG GIAO MAY HỘI"</p>
+                <a href="assets/img/masonry-portfolio/lehoi/lh1.png" title="Lễ hội văn hóa 'ĐÔNG GIAO MAY HỘI'" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tbd">
               <img loading="lazy" src="assets/img/masonry-portfolio/teambuilding/tbd1.png" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -433,13 +479,13 @@
                 <a href="assets/img/masonry-portfolio/teambuilding/tbd1.png" title="Chương trình Teambuilding dành cho phụ huynh và học sinh" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-event">
-              <img loading="lazy" src="assets/img/masonry-portfolio/sukien/sk3.png" class="img-fluid" alt="">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tbd">
+              <img loading="lazy" src="assets/img/masonry-portfolio/teambuilding/tbd2.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Sự kiện</h4>
-                <p>Year End Party</p>
-                <a href="assets/img/masonry-portfolio/sukien/sk3.png" title="Year End Party" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <h4>Teambuilding</h4>
+                <p>Team building Vinshool</p>
+                <a href="assets/img/masonry-portfolio/teambuilding/tbd2.png" title="Team building Vinshool" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
             
@@ -451,8 +497,26 @@
                 <a href="assets/img/masonry-portfolio/thuonghieu/th2.png" title="Chiến dịch truyền thông ACE FOODS" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tbd">
+              <img loading="lazy" src="assets/img/masonry-portfolio/teambuilding/tbd3.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Teambuilding</h4>
+                <p>Ngày hội Sasuke</p>
+                <a href="assets/img/masonry-portfolio/teambuilding/tbd3.png" title="Ngày hội Sasuke" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-brand">
+              <img loading="lazy" src="assets/img/masonry-portfolio/thuonghieu/th4.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Thương hiệu</h4>
+                <p>Chào hè rực rỡ Cuckoo</p>
+                <a href="assets/img/masonry-portfolio/thuonghieu/th4.png" title="Chào hè rực rỡ Cuckoo" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div>
             
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-fes">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-event">
               <img loading="lazy" src="assets/img/masonry-portfolio/sukien/sk5.png" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Sự kiện</h4>
@@ -467,15 +531,6 @@
                 <h4>Thương hiệu</h4>
                 <p>Oisi siêu snack Party</p>
                 <a href="assets/img/masonry-portfolio/thuonghieu/th1.png" title="Oisi siêu snack Party" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-event">
-              <img loading="lazy" src="assets/img/masonry-portfolio/sukien/sk2.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Sự kiện</h4>
-                <p>Year end party 2024</p>
-                <a href="assets/img/masonry-portfolio/sukien/sk2.png" title="Year end party 2024" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
             </div>
 
@@ -500,11 +555,10 @@
 
       <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter=".filter-img" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Toàn bộ</li>
-            <li data-filter=".filter-img">Hình ảnh</li>
+            <li data-filter=".filter-img" class="filter-active">Hình ảnh</li>
             <li data-filter=".filter-video">Video</li>
           </ul><!-- End Portfolio Filters -->
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -650,19 +704,27 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <h3 class="sitename">Kết nối với tôi</h3>
-      <p>Liên hệ hỗ trợ qua các nền tảng mạng xã hội để được hỗ trợ tốt nhất</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+  <footer id="footer" class="footer position-relative light-background" style="background-color: rgb(47, 49, 50); color: #fff;">
+    <div class="container text-center">
+      <h3 class="sitename" style="color: #fff;">Kết nối với tôi qua các nền tảng mạng xã hội</h3>
+      
+      <div class="social-links d-flex justify-content-center flex-wrap gap-3 mt-3">
+        <a href="https://www.facebook.com/dangtinh199/" target="_blank">
+          <img src="/assets/img/footer/fb.webp" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://www.youtube.com/@mcdangtinh" target="_blank">
+          <img src="/assets/img/footer/yt.webp" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://www.tiktok.com/@mcdangtinh" target="_blank">
+          <img src="/assets/img/footer/tt.webp" alt="TikTok" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/dangtinh199/?fbclid=IwY2xjawGoo1JleHRuA2FlbQIxMAABHSmrZDXi0263LL16QiLwZTFNKk3F_bi8ywi5ol9aqAhGe1L2K6jG6xbjHg_aem_tanrLKkivGdXirxwcd4wyAe" target="_blank">
+          <img src="/assets/img/footer/ins.webp" alt="Instagram" class="social-icon">
+        </a>
       </div>
     </div>
   </footer>
+  
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
