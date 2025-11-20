@@ -1486,6 +1486,129 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+/* Starter section styles can be added here when needed */
+
+/*--------------------------------------------------------------
+# Diamond Layout for Professional Fields
+--------------------------------------------------------------*/
+.diamond-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.diamond-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Middle items container - to calculate total height */
+.diamond-middle-wrapper {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Middle items - stacked vertically */
+.diamond-middle-top {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.diamond-middle-bottom {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Left item - centered vertically, same size as middle items */
+.diamond-left {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diamond-left .service-item {
+  width: 100%;
+  max-width: 100%;
+  align-self: center;
+}
+
+/* Right item - centered vertically, same size as middle items */
+.diamond-right {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diamond-right .service-item {
+  width: 100%;
+  max-width: 100%;
+  align-self: center;
+}
+
+/* Ensure all service items have equal height and width */
+.diamond-layout .service-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.diamond-layout .service-item > div:first-child {
+  flex-shrink: 0;
+}
+
+.diamond-layout .service-item h3 {
+  flex-shrink: 0;
+}
+
+.diamond-layout .service-item > div:nth-child(2) {
+  flex-grow: 1;
+}
+
+.diamond-layout .service-item .mt-2 {
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments for tablets and mobile */
+@media (max-width: 991px) {
+  .diamond-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 30px;
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  .diamond-left {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .diamond-middle-top {
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 0;
+  }
+
+  .diamond-middle-bottom {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 0;
+  }
+
+  .diamond-right {
+    grid-column: 1;
+    grid-row: 4;
+  }
 }
