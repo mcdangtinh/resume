@@ -17,8 +17,8 @@ if sys.platform == 'win32':
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 # Cấu hình
-SOURCE_DIR = Path("assets/img")
-OUTPUT_DIR = Path("assets/img-2")
+SOURCE_DIR = Path("source")
+OUTPUT_DIR = Path("dir")
 
 # Kích thước tối đa cho các loại ảnh
 MAX_WIDTH_LARGE = 1920  # Cho ảnh hero, background
