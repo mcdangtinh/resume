@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>MC Đăng Tình</title>
+  <title>Nguyễn Đăng Tình</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
-  <meta property="og:title" content="MC Đăng Tình">
+  <meta property="og:title" content="Nguyễn Đăng Tình">
   <meta property="og:image" content="https://nguyendangtinh.website/assets/img/thumbnail.webp">
   <meta property="og:url" content="https://nguyendangtinh.website/">
   <meta property="og:type" content="website">
@@ -497,6 +497,82 @@
         height: 340px;
       }
     }
+
+    /* Hero */
+    .hero .hero-content {
+      text-align: left;
+    }
+
+    .hero .hero-accent-line {
+      width: 64px;
+      height: 3px;
+      background: var(--accent-color);
+      margin: 0 0 1.5rem;
+      border-radius: 2px;
+    }
+
+    .hero .hero-name {
+      font-family: var(--heading-font);
+      font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+      font-weight: 700;
+      color: var(--heading-color);
+      margin: 0 0 1.25rem;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .hero .hero-tagline {
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      color: color-mix(in srgb, var(--default-color), transparent 10%);
+      max-width: 680px;
+      margin: 0 0 1.25rem;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .hero .hero-roles {
+      font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+      font-weight: 600;
+      color: var(--accent-color);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0 0 2rem;
+    }
+
+    .hero .hero-roles .sep {
+      color: color-mix(in srgb, var(--accent-color), transparent 45%);
+      font-weight: 400;
+      margin: 0 0.5rem;
+      border-bottom: none;
+    }
+
+    .hero .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: flex-start;
+    }
+
+    .hero .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .hero .hero-btn--primary {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+    }
+
+    .hero .hero-btn--primary:hover {
+      background: color-mix(in srgb, var(--accent-color), transparent 20%);
+      color: var(--contrast-color);
+    }
   </style>
 </head>
 
@@ -540,24 +616,18 @@
       <img loading="lazy" src="assets/img/hero-bg.webp" alt="" />
 
       <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center hero-content">
-          <div class="col-lg-8">
-            <h2>MC Đăng Tình</h2>
-            <p>
-              Sự kiện - Truyền hình - Tiệc cưới
-              <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+        <div class="row justify-content-start hero-content">
+          <div class="col-lg-9 col-xl-8">
+            <h1 class="hero-name">Nguyễn Đăng Tình</h1>
+            <p class="hero-tagline">
+              Người kể chuyện bằng giọng nói, ngôn từ và những trải nghiệm thực tế.
             </p>
-            <div class="social-links">
-              <!-- <a href"#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a> -->
-
-              <button type="submit">
-                <div style="text-align: center">
-                  <a href="#contact" style="color: #ffffff">Đặt lịch ngay</a>
-                </div>
-              </button>
+            <p class="hero-roles">
+              MC<span class="sep">|</span>Phóng viên<span class="sep">|</span>Giảng viên kỹ năng mềm
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="hero-btn hero-btn--primary">Đặt lịch ngay <i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -571,7 +641,7 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>Giới Thiệu MC Đăng Tình</h2>
         <p>
-          Khám phá câu chuyện đằng sau giọng nói truyền cảm hứng cho hàng trăm
+          Khám phá câu chuyện đằng sau giọng nói kết nối cho hàng trăm
           sự kiện thành công
         </p>
       </div>
@@ -608,7 +678,7 @@
                   <li>
                     <i class="bi bi-chevron-right"></i>
                     <strong>Bằng cấp:</strong>
-                    <span>Tốt nghiệp Nghiệp vụ báo chí truyền thông – Trường Đại học Khoa học Xã hội và Nhân văn – DHQGHN</span>
+                    <span>Tốt nghiệp Nghiệp vụ báo chí truyền thông – Trường Đại học Khoa học Xã hội và Nhân văn – ĐHQGHN</span>
                   </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
@@ -919,7 +989,7 @@
             <div class="service-item item-cyan position-relative">
               <div>
                 <img loading="lazy" width="100%" style="height: 250px; object-fit: cover; object-position: center 15%;"
-                  src="./assets/img/linhvuc/IMG_3308.webp" />
+                  src="./assets/img/linhvuc/cuoi.webp" />
               </div>
 
               <a href="#" class="stretched-link">
@@ -1316,10 +1386,14 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="gallery-slide-col gallery-slide-col--landscape">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
                   <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a4.webp"
                       alt=""><a href="assets/img/masonry-portfolio/canhan/a4.webp" class="glightbox glightbox-overlay"
                       data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--landscape">
                   <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a11.webp"
                       alt=""><a href="assets/img/masonry-portfolio/canhan/a11.webp" class="glightbox glightbox-overlay"
                       data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
@@ -1806,21 +1880,19 @@
         <div class="row gy-5 align-items-center">
 
           <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
-            <h3 style="font-weight: 700; color: var(--heading-color); margin-bottom: 20px; font-size: 2rem;">Sẵn sàng
-              cho sự kiện tiếp theo?</h3>
+            <h3 style="font-weight: 700; color: var(--heading-color); margin-bottom: 20px; font-size: 2rem;">Từ một ý tưởng đến một chương trình trọn vẹn</h3>
             <p style="color: var(--default-color); font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
-              Hãy để tôi giúp bạn mang đến một chương trình thành công, chuyên nghiệp và đầy cảm xúc. Điền thông tin vào
-              form bên cạnh để chúng ta có thể trao đổi chi tiết hơn về sự kiện của bạn!
+              Mỗi sự kiện đều mang một câu chuyện riêng, và tôi luôn mong mình có cơ hội góp một phần nhỏ để câu chuyện ấy được kể trọn vẹn hơn.
+            </p>
+            <p style="color: var(--default-color); font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+              Hãy để lại thông tin bên cạnh, tôi sẽ chủ động liên hệ để cùng trao đổi về ý tưởng, nội dung và những điều bạn mong muốn cho chương trình sắp tới.
             </p>
             <ul class="list-unstyled" style="font-size: 1.05rem; line-height: 2.2;">
-              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Phản
-                hồi nhanh chóng trong vòng 2h</li>
-              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Tư vấn
-                kịch bản chuyên sâu & sáng tạo</li>
-              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Phong
-                cách dẫn đa dạng, linh hoạt</li>
-              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Tận
-                tâm, trách nhiệm đến phút cuối cùng</li>
+              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Phản hồi nhanh và trao đổi trực tiếp
+              </li>
+              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Tư vấn nội dung và kịch bản phù hợp</li>
+              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Linh hoạt với nhiều loại hình sự kiện</li>
+              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Đồng hành xuyên suốt cùng chương trình</li>
             </ul>
           </div>
 
