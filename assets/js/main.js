@@ -150,6 +150,7 @@
         filter: filter,
         sortBy: sort
       });
+      isotopeItem.isotopeInstance = initIsotope;
     });
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
@@ -165,6 +166,20 @@
       }, false);
     });
 
+  });
+
+  // Relayout Isotope layout when dynamic elements like TikTok embeds finish loading
+  window.addEventListener('load', () => {
+    const relayout = () => {
+      document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+        if (isotopeItem.isotopeInstance) {
+          isotopeItem.isotopeInstance.layout();
+        }
+      });
+    };
+    [500, 1000, 2000, 4000, 7000].forEach(delay => {
+      setTimeout(relayout, delay);
+    });
   });
 
   /**
@@ -225,5 +240,34 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Hinhanh Tab Switching
+   */
+  document.querySelectorAll('#hinhanh .hinhanh-tab-btns li').forEach(tabBtn => {
+    tabBtn.addEventListener('click', function() {
+      // Remove active class from all buttons
+      document.querySelectorAll('#hinhanh .hinhanh-tab-btns li').forEach(btn => btn.classList.remove('tab-active'));
+      // Add active class to clicked button
+      this.classList.add('tab-active');
+      
+      // Hide all tab contents
+      document.querySelectorAll('#hinhanh .hinhanh-tab-content').forEach(content => content.classList.remove('tab-visible'));
+      
+      // Show targeted tab content
+      const targetTab = this.getAttribute('data-tab');
+      const targetContent = document.getElementById(targetTab);
+      if (targetContent) {
+        targetContent.classList.add('tab-visible');
+        
+        // If swiper is inside this tab, trigger update to fix dimension calculations
+        targetContent.querySelectorAll('.swiper').forEach(swiperEl => {
+          if (swiperEl.swiper) {
+            swiperEl.swiper.update();
+          }
+        });
+      }
+    });
+  });
 
 })();
