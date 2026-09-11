@@ -8,7 +8,10 @@ sang format WebP với kích thước tối ưu cho web (nhẹ nhất).
 import os
 from pathlib import Path
 from PIL import Image
+from pillow_heif import register_heif_opener
 import sys
+
+register_heif_opener()  # cho Pillow đọc được .heic
 
 # Fix encoding cho Windows console
 if sys.platform == 'win32':
