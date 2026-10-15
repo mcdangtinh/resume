@@ -850,7 +850,7 @@ section,
 }
 
 .hero .hero-media img {
-  object-position: 78% center;
+  object-position: center 20%;
 }
 
 /* Frosted quote card overlapping the arch */
