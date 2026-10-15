@@ -690,6 +690,149 @@
     #events .events-slide-info a:hover {
       color: var(--accent-color);
     }
+
+    /* About */
+    .about .about-photo {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 30%;
+      border-radius: 5px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 992px) {
+      .about .about-photo-wrap {
+        position: relative;
+        height: 100%;
+        min-height: 300px;
+      }
+
+      .about .about-photo {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        max-width: none;
+        aspect-ratio: auto;
+      }
+    }
+
+    .about .about-intro p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+
+    .about .about-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .about .about-group:first-child {
+      margin-top: 0;
+    }
+
+    .about .about-intro + .about-group {
+      margin-top: 1.25rem;
+    }
+
+    .about .about-group span {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-color);
+      white-space: nowrap;
+    }
+
+    .about .about-group::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: color-mix(in srgb, var(--default-color), transparent 82%);
+    }
+
+    .about .about-card {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 24px 22px;
+      background: var(--surface-color);
+      border-radius: 5px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+      transition: 0.3s;
+    }
+
+    .about .about-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .about .about-card i {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 50%;
+      font-size: 22px;
+      color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      transition: 0.3s;
+    }
+
+    .about .about-card:hover i {
+      color: var(--contrast-color);
+      background: var(--accent-color);
+    }
+
+    .about .about-card h4 {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0 0 4px;
+      text-wrap: balance;
+    }
+
+    .about .about-card p {
+      font-size: 14px;
+      line-height: 22px;
+      margin: 0;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+    }
+
+    .about .about-badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    }
+
+    .about .about-card--sm {
+      gap: 12px;
+      padding: 18px 16px;
+    }
+
+    .about .about-card--sm i {
+      width: 42px;
+      height: 42px;
+      font-size: 18px;
+    }
+
+    .about .about-card--sm h4 {
+      font-size: 15px;
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -740,7 +883,7 @@
               Người kể chuyện bằng giọng nói, ngôn từ và những trải nghiệm thực tế.
             </p>
             <p class="hero-roles">
-              MC<span class="sep">|</span>Phóng viên<span class="sep">|</span>Giảng viên kỹ năng mềm
+              MC<span class="sep">|</span>Biên tập viên<span class="sep">|</span>Giảng viên kỹ năng mềm
             </p>
             <div class="hero-actions">
               <a href="#contact" class="hero-btn hero-btn--primary">Đặt lịch ngay <i class="bi bi-arrow-right"></i></a>
@@ -763,93 +906,129 @@
       <!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-4" style="display: flex;justify-content: center;">
-            <img loading="lazy" src="assets/img/profile-img-3.webp" class="img-fluid" alt=""
-              style="width: 90%; height: 90%; object-fit: cover;" />
-          </div>
-          <div class="col-lg-8 content">
-            <p class="fst-italic py-3">
-              Đến với nghề MC từ những sân khấu nhỏ và dần có cơ hội đồng hành cùng nhiều chương trình, sự kiện ở những
-              quy mô và vai trò khác nhau. Công việc này cho tôi cơ hội được gặp gỡ nhiều người, lắng nghe nhiều câu
-              chuyện và học thêm những góc nhìn mới về cuộc sống.
-              Bên cạnh công việc dẫn chương trình, cơ duyên đưa tôi đến với báo chí, truyền thông và công tác đào tạo kỹ
-              năng mềm. Càng đi nhiều, gặp nhiều, tôi càng nhận ra rằng mỗi con người, mỗi doanh nghiệp hay mỗi vùng đất
-              đều có những câu chuyện rất riêng đáng được kể bằng sự chân thành và tôn trọng.
-              Đến nay, dù đứng trên sân khấu với vai trò MC, tác nghiệp cho những phóng sự,viết những bài báo, dẫn dắt
-              những bản tin hay chia sẻ trong các lớp học kỹ năng, tôi vẫn đang làm một công việc quen thuộc: lắng nghe,
-              kết nối và kể lại những điều có ý nghĩa theo cách của mình.
-            </p>
-            <h2>Học vấn và hoạt động chuyên môn</h2>
-            <div class="row">
+        <div class="about-group"><span>Hoạt động chuyên môn</span></div>
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <div class="about-card">
+              <i class="bi bi-tv"></i>
               <div>
-                <ul>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>MC:</strong>
-                    <span>TTV – Báo và Phát thanh, Truyền hình Thanh Hóa</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Giảng viên:</strong>
-                    <span>Học viện kỹ năng mềm ST Lighthouse</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Nguyên phóng viên:</strong>
-                    <span>Tạp chí Nông nghiệp và Môi trường – Bộ Nông nghiệp và Môi trường</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Bằng cấp:</strong>
-                    <span>Cử nhân Đại học Công nghiệp Hà Nội</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Bằng cấp:</strong>
-                    <span>Tốt nghiệp Nghiệp vụ báo chí truyền thông – Trường Đại học Khoa học Xã hội và Nhân văn –
-                      ĐHQGHN</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Bằng cấp:</strong>
-                    <span>Tốt nghiệp xuất sắc khóa MC Truyền hình – ST Lighthouse
-                    </span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <strong>Bằng cấp:</strong>
-                    <span>Tốt nghiệp xuất sắc khóa MC Chuyên nghiệp - ST
-                      Lighthouse</span>
-                  </li>
-                </ul>
+                <h4>MC</h4>
+                <p>TTV – Báo và Phát thanh, Truyền hình Thanh Hóa</p>
               </div>
             </div>
-            <h2>Lĩnh vực hoạt động</h2>
-            <div class="row">
-              <div class="col-6">
-                <ul>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <span>MC</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <span>Báo chí</span>
-                  </li>
-                </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="about-card">
+              <i class="bi bi-easel2"></i>
+              <div>
+                <h4>Giảng viên</h4>
+                <p>Học viện kỹ năng mềm ST Lighthouse</p>
               </div>
-              <div class="col-6">
-                <ul>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <span>Truyền thông</span>
-                  </li>
-                  <li>
-                    <i class="bi bi-chevron-right"></i>
-                    <span>Đào tạo kỹ năng mềm</span>
-                  </li>
-                </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="about-card">
+              <i class="bi bi-journal-text"></i>
+              <div>
+                <h4>Nguyên phóng viên</h4>
+                <p>Tạp chí Nông nghiệp và Môi trường – Bộ Nông nghiệp và Môi trường</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <div class="about-photo-wrap">
+              <img loading="lazy" src="assets/img/profile-img-3.webp" class="about-photo" alt="Nguyễn Đăng Tình" />
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="about-intro">
+              <p>
+                Đến với nghề MC từ những sân khấu nhỏ và dần có cơ hội đồng hành cùng nhiều chương trình, sự kiện ở
+                những quy mô và vai trò khác nhau. Công việc này cho tôi cơ hội được gặp gỡ nhiều người, lắng nghe nhiều
+                câu chuyện và học thêm những góc nhìn mới về cuộc sống.
+              </p>
+              <p>
+                Bên cạnh công việc dẫn chương trình, cơ duyên đưa tôi đến với báo chí, truyền thông và công tác đào tạo
+                kỹ năng mềm. Càng đi nhiều, gặp nhiều, tôi càng nhận ra rằng mỗi con người, mỗi doanh nghiệp hay mỗi
+                vùng đất đều có những câu chuyện rất riêng đáng được kể bằng sự chân thành và tôn trọng.
+              </p>
+              <p>
+                Đến nay, dù đứng trên sân khấu với vai trò MC, tác nghiệp cho những phóng sự, viết những bài báo, dẫn
+                dắt những bản tin hay chia sẻ trong các lớp học kỹ năng, tôi vẫn đang làm một công việc quen thuộc: lắng
+                nghe, kết nối và kể lại những điều có ý nghĩa theo cách của mình.
+              </p>
+            </div>
+
+            <div class="about-group"><span>Lĩnh vực hoạt động</span></div>
+            <div class="row g-3">
+            <div class="col-6 col-md-3">
+              <div class="about-card about-card--sm">
+                <i class="bi bi-mic"></i>
+                <h4>MC</h4>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="about-card about-card--sm">
+                <i class="bi bi-newspaper"></i>
+                <h4>Báo chí</h4>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="about-card about-card--sm">
+                <i class="bi bi-broadcast"></i>
+                <h4>Truyền thông</h4>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="about-card about-card--sm">
+                <i class="bi bi-people"></i>
+                <h4>Đào tạo kỹ năng mềm</h4>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-group"><span>Học vấn</span></div>
+        <div class="row g-3">
+          <div class="col-md-6 col-xl-3">
+            <div class="about-card">
+              <i class="bi bi-mortarboard"></i>
+              <div>
+                <h4>Cử nhân</h4>
+                <p>Đại học Công nghiệp Hà Nội</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="about-card">
+              <i class="bi bi-journal-bookmark"></i>
+              <div>
+                <h4>Nghiệp vụ báo chí truyền thông</h4>
+                <p>Trường Đại học Khoa học Xã hội và Nhân văn – ĐHQGHN</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="about-card">
+              <i class="bi bi-award"></i>
+              <div>
+                <h4>Khóa MC Truyền hình</h4>
+                <p>ST Lighthouse</p>
+                <span class="about-badge">Tốt nghiệp xuất sắc</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="about-card">
+              <i class="bi bi-award"></i>
+              <div>
+                <h4>Khóa MC Chuyên nghiệp</h4>
+                <p>ST Lighthouse</p>
+                <span class="about-badge">Tốt nghiệp xuất sắc</span>
               </div>
             </div>
           </div>
@@ -1587,13 +1766,6 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="gallery-slide-col gallery-slide-col--portrait">
-                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a28.webp"
-                      alt=""><a href="assets/img/masonry-portfolio/canhan/a28.webp" class="glightbox glightbox-overlay"
-                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
-                </div>
-              </div>
-              <div class="swiper-slide">
                 <div class="gallery-slide-col gallery-slide-col--landscape">
                   <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a26.webp"
                       alt=""><a href="assets/img/masonry-portfolio/canhan/a26.webp" class="glightbox glightbox-overlay"
@@ -1646,8 +1818,8 @@
                   <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a34.webp"
                       alt=""><a href="assets/img/masonry-portfolio/canhan/a34.webp" class="glightbox glightbox-overlay"
                       data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
-                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a35.webp"
-                      alt=""><a href="assets/img/masonry-portfolio/canhan/a35.webp" class="glightbox glightbox-overlay"
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a40.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a40.webp" class="glightbox glightbox-overlay"
                       data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
                 </div>
               </div>
@@ -1655,16 +1827,6 @@
                 <div class="gallery-slide-col gallery-slide-col--portrait">
                   <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a39.webp"
                       alt=""><a href="assets/img/masonry-portfolio/canhan/a39.webp" class="glightbox glightbox-overlay"
-                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallery-slide-col gallery-slide-col--landscape">
-                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a40.webp"
-                      alt=""><a href="assets/img/masonry-portfolio/canhan/a40.webp" class="glightbox glightbox-overlay"
-                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
-                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a41.webp"
-                      alt=""><a href="assets/img/masonry-portfolio/canhan/a41.webp" class="glightbox glightbox-overlay"
                       data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
                 </div>
               </div>
@@ -1680,8 +1842,8 @@
                   <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a44.webp"
                       alt=""><a href="assets/img/masonry-portfolio/canhan/a44.webp" class="glightbox glightbox-overlay"
                       data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
-                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a48.webp"
-                      alt=""><a href="assets/img/masonry-portfolio/canhan/a48.webp" class="glightbox glightbox-overlay"
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a83.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a83.webp" class="glightbox glightbox-overlay"
                       data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
                 </div>
               </div>
@@ -1704,13 +1866,6 @@
               </div>
               <div class="swiper-slide">
                 <div class="gallery-slide-col gallery-slide-col--portrait">
-                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a45.webp"
-                      alt=""><a href="assets/img/masonry-portfolio/canhan/a45.webp" class="glightbox glightbox-overlay"
-                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="gallery-slide-col gallery-slide-col--portrait">
                   <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a46.webp"
                       alt=""><a href="assets/img/masonry-portfolio/canhan/a46.webp" class="glightbox glightbox-overlay"
                       data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
@@ -1724,9 +1879,159 @@
                 </div>
               </div>
               <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--landscape">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a52.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a52.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a53.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a53.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
                 <div class="gallery-slide-col gallery-slide-col--portrait">
-                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a51.webp"
-                      alt=""><a href="assets/img/masonry-portfolio/canhan/a51.webp" class="glightbox glightbox-overlay"
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a54.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a54.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--landscape">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a55.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a55.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a56.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a56.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a62.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a62.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--landscape">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a58.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a58.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a60.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a60.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a65.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a65.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a66.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a66.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--landscape">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a61.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a61.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a63.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a63.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a69.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a69.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--landscape">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a64.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a64.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a68.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a68.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a72.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a72.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a73.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a73.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--landscape">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a70.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a70.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a71.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a71.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a76.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a76.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--landscape">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a74.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a74.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a75.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a75.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a79.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a79.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--landscape">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a77.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a77.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a78.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a78.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a82.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a82.webp" class="glightbox glightbox-overlay"
+                      data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="gallery-slide-col gallery-slide-col--portrait">
+                  <div class="gallery-img-wrap"><img loading="lazy" src="assets/img/masonry-portfolio/canhan/a85.webp"
+                      alt=""><a href="assets/img/masonry-portfolio/canhan/a85.webp" class="glightbox glightbox-overlay"
                       data-gallery="gallery-img"><i class="bi bi-zoom-in"></i></a></div>
                 </div>
               </div>
@@ -1945,14 +2250,6 @@
             </div>
             <div class="facebook-post-item">
               <iframe
-                data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FSTLighthouse%2Fposts%2Fpfbid02J7Wn6pUz16TTBpTuSB3tYzdNsWqLnWg3vgN2Fqpte2NaJexfXrAEKf4xb42qa96Ul&show_text=true"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true" loading="lazy">
-              </iframe>
-            </div>
-            <div class="facebook-post-item">
-              <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1460643575467494%26set%3Da.597351921796668%26type%3D3&show_text=true"
                 width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
@@ -1962,14 +2259,6 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdangtinh199%2Fposts%2Fpfbid0mHk9b9ULbJX7gr4q4fvusWKF3iMGp2YBDwDLNFJLKVcx7PZPRaa6oME2vZUnggF7l&show_text=true"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowFullScreen="true" loading="lazy">
-              </iframe>
-            </div>
-            <div class="facebook-post-item">
-              <iframe
-                data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdangtinh199%2Fposts%2Fpfbid0EWbb8orV9EPQiXKwnHoTRMYx2EpnDKAeev5dk3vJAuZXgLUEv5FDVPWwPNt9vo3pl&show_text=true"
                 width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
