@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:wght@400;500;600&display=swap"
     rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
@@ -41,853 +41,63 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <style>
-    .service-item img {
-      transition: transform 0.4s ease;
-    }
-
-    .service-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .user-item img {
-      transition: transform 0.4s ease;
-    }
-
-    .user-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .social-icon {
-      width: 40px;
-      height: 40px;
-      padding: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icon:hover {
-      transform: scale(1.2);
-    }
-
-    @media (max-width: 576px) {
-      .social-icon {
-        width: 36px;
-        height: 36px;
-        padding: 6px;
-      }
-
-      .social-links {
-        gap: 1rem;
-      }
-    }
-
-    /* Facebook Posts Horizontal Scroll */
-    .facebook-posts-wrapper {
-      position: relative;
-      padding: 0 60px;
-    }
-
-    .facebook-posts-scroll {
-      display: flex;
-      overflow-x: auto;
-      overflow-y: hidden;
-      gap: 1.5rem;
-      padding: 1rem 0;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      /* Firefox */
-      -ms-overflow-style: none;
-      /* IE and Edge */
-    }
-
-    .facebook-posts-scroll::-webkit-scrollbar {
-      display: none;
-      /* Chrome, Safari, Opera */
-    }
-
-    .facebook-post-item {
-      flex: 0 0 auto;
-      width: 560px;
-      max-width: 90vw;
-      position: relative;
-    }
-
-    .facebook-post-item iframe {
-      width: 100%;
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      background-color: #f5f5f5;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .facebook-post-item iframe[src] {
-      opacity: 1;
-    }
-
-    .facebook-scroll-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: var(--accent-color);
-      border: none;
-      width: 44px;
-      height: 44px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10;
-      transition: all 0.4s;
-    }
-
-    .facebook-scroll-btn i {
-      font-size: 24px;
-      color: var(--contrast-color);
-      line-height: 0;
-    }
-
-    .facebook-scroll-btn:hover {
-      background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-      color: var(--contrast-color);
-    }
-
-    .facebook-scroll-left {
-      left: 0;
-    }
-
-    .facebook-scroll-right {
-      right: 0;
-    }
-
-    @media (max-width: 992px) {
-      .facebook-posts-wrapper {
-        padding: 0 3rem;
-      }
-
-      .facebook-post-item {
-        width: 480px;
-      }
-
-      .facebook-post-item iframe {
-        height: 500px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .facebook-posts-wrapper {
-        padding: 0 2.5rem;
-      }
-
-      .facebook-scroll-btn {
-        width: 40px;
-        height: 40px;
-      }
-
-      .facebook-scroll-btn i {
-        font-size: 20px;
-      }
-
-      .facebook-posts-scroll {
-        gap: 1.25rem;
-        padding: 0.75rem 0;
-      }
-
-      .facebook-post-item {
-        width: calc(100vw - 5rem);
-        max-width: 450px;
-      }
-
-      .facebook-post-item iframe {
-        height: auto;
-        min-height: 500px;
-        border-radius: 6px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .facebook-posts-wrapper {
-        padding: 0 1.5rem;
-      }
-
-      .facebook-scroll-btn {
-        width: 36px;
-        height: 36px;
-      }
-
-      .facebook-scroll-btn i {
-        font-size: 18px;
-      }
-
-      .facebook-scroll-left {
-        left: -0.5rem;
-      }
-
-      .facebook-scroll-right {
-        right: -0.5rem;
-      }
-
-      .facebook-posts-scroll {
-        gap: 1rem;
-        padding: 0.5rem 0;
-      }
-
-      .facebook-post-item {
-        width: calc(100vw - 3rem);
-        max-width: none;
-      }
-
-      .facebook-post-item iframe {
-        height: auto;
-        min-height: 550px;
-        border-radius: 4px;
-      }
-    }
-
-    @media (max-width: 400px) {
-      .facebook-posts-wrapper {
-        padding: 0 1rem;
-      }
-
-      .facebook-scroll-btn {
-        width: 32px;
-        height: 32px;
-      }
-
-      .facebook-scroll-btn i {
-        font-size: 16px;
-      }
-
-      .facebook-scroll-left {
-        left: -0.25rem;
-      }
-
-      .facebook-scroll-right {
-        right: -0.25rem;
-      }
-
-      .facebook-posts-scroll {
-        gap: 0.75rem;
-      }
-
-      .facebook-post-item {
-        width: calc(100vw - 2rem);
-      }
-
-      .facebook-post-item iframe {
-        height: auto;
-        min-height: 500px;
-      }
-    }
-
-    /* Fix Swiper Slide Height */
-    #services .swiper-slide {
-      height: auto;
-    }
-
-    #services .service-item {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-
-    /* Fix Icon Hover Color Loss */
-    .services .service-item.item-cyan:hover .icon i {
-      color: #0dcaf0 !important;
-    }
-
-    .services .service-item.item-orange:hover .icon i {
-      color: #fd7e14 !important;
-    }
-
-    .services .service-item.item-teal:hover .icon i {
-      color: #20c997 !important;
-    }
-
-    .services .service-item.item-red:hover .icon i {
-      color: #df1529 !important;
-    }
-
-    .services .service-item.item-indigo:hover .icon i {
-      color: #6610f2 !important;
-    }
-
-    .services .service-item.item-pink:hover .icon i {
-      color: #f3268c !important;
-    }
-
-    /* Image Gallery Swiper */
-    .gallery-swiper-wrapper {
-      position: relative;
-    }
-
-    .gallery-swiper .swiper-slide {
-      height: auto;
-      width: calc(100% / 3 - 14px) !important;
-    }
-
-    .gallery-slide-col {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      height: 520px;
-    }
-
-    .gallery-slide-col--portrait .gallery-img-wrap {
-      flex: 1;
-      min-height: 0;
-    }
-
-    .gallery-slide-col--portrait .gallery-img-wrap img {
-      object-position: center center;
-    }
-
-    .gallery-slide-col .gallery-img-wrap {
-      flex: 1;
-      overflow: hidden;
-      border-radius: 8px;
-      position: relative;
-    }
-
-    .gallery-slide-col .gallery-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    .gallery-slide-col .gallery-img-wrap:hover img {
-      transform: scale(1.05);
-    }
-
-    .gallery-slide-col .gallery-img-wrap .glightbox-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.3s ease;
-      cursor: pointer;
-    }
-
-    .gallery-slide-col .gallery-img-wrap .glightbox-overlay i {
-      color: #fff;
-      font-size: 28px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .gallery-slide-col .gallery-img-wrap:hover .glightbox-overlay {
-      background: rgba(0, 0, 0, 0.3);
-    }
-
-    .gallery-slide-col .gallery-img-wrap:hover .glightbox-overlay i {
-      opacity: 1;
-    }
-
-    #hinhanh .hinhanh-tab-btns {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    #hinhanh .hinhanh-tab-btns li {
-      cursor: pointer;
-      padding: 8px 24px;
-      border-radius: 50px;
-      font-size: 15px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      color: var(--default-color);
-      border: 1px solid #ccc;
-    }
-
-    #hinhanh .hinhanh-tab-btns li.tab-active {
-      background: var(--accent-color);
-      color: var(--contrast-color);
-      border-color: var(--accent-color);
-    }
-
-    #hinhanh .hinhanh-tab-content {
-      display: none;
-    }
-
-    #hinhanh .hinhanh-tab-content.tab-visible {
-      display: block;
-    }
-
-    @media (max-width: 1200px) {
-      .gallery-swiper .swiper-slide {
-        width: calc(100% / 2 - 10px) !important;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .gallery-slide-col {
-        height: 400px;
-      }
-
-      .gallery-swiper .swiper-slide {
-        width: 100% !important;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .gallery-slide-col {
-        height: 340px;
-      }
-    }
-
-    /* Video Gallery Swiper */
-    .video-swiper .swiper-slide {
-      height: auto;
-      width: calc(100% / 3 - 14px) !important;
-    }
-
-    .video-slide-col {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      height: 520px;
-    }
-
-    .video-slide-col .video-slide-card {
-      flex: 1;
-      min-height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #111;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-    }
-
-    .video-slide-col .video-slide-card iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
-
-    @media (max-width: 1200px) {
-      .video-swiper .swiper-slide {
-        width: calc(100% / 2 - 10px) !important;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .video-slide-col {
-        height: 400px;
-      }
-
-      .video-swiper .swiper-slide {
-        width: 100% !important;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .video-slide-col {
-        height: 340px;
-      }
-    }
-
-    /* Hero */
-    .hero .hero-content {
-      text-align: left;
-    }
-
-    .hero .hero-accent-line {
-      width: 64px;
-      height: 3px;
-      background: var(--accent-color);
-      margin: 0 0 1.5rem;
-      border-radius: 2px;
-    }
-
-    .hero .hero-name {
-      font-family: var(--heading-font);
-      font-size: clamp(2.25rem, 5.5vw, 3.75rem);
-      font-weight: 700;
-      color: var(--heading-color);
-      margin: 0 0 1.25rem;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
-
-    .hero .hero-tagline {
-      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-      color: color-mix(in srgb, var(--default-color), transparent 10%);
-      max-width: 680px;
-      margin: 0 0 1.25rem;
-      line-height: 1.75;
-      font-weight: 300;
-    }
-
-    .hero .hero-roles {
-      font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-      font-weight: 600;
-      color: var(--accent-color);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin: 0 0 2rem;
-    }
-
-    .hero .hero-roles .sep {
-      color: color-mix(in srgb, var(--accent-color), transparent 45%);
-      font-weight: 400;
-      margin: 0 0.5rem;
-      border-bottom: none;
-    }
-
-    .hero .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: flex-start;
-    }
-
-    .hero .hero-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 12px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: 0.3s ease;
-    }
-
-    .hero .hero-btn--primary {
-      background: var(--accent-color);
-      color: var(--contrast-color);
-    }
-
-    .hero .hero-btn--primary:hover {
-      background: color-mix(in srgb, var(--accent-color), transparent 20%);
-      color: var(--contrast-color);
-    }
-
-    /* Events Filmstrip Rows */
-    #events .events-row {
-      margin-bottom: 2.75rem;
-    }
-
-    #events .events-row:last-child {
-      margin-bottom: 0;
-    }
-
-    #events .events-row-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.25rem;
-    }
-
-    #events .events-row-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent-color);
-      white-space: nowrap;
-    }
-
-    #events .events-row-line {
-      flex: 1;
-      height: 1px;
-      background: color-mix(in srgb, var(--default-color), transparent 82%);
-    }
-
-    #events .swiper-button-prev,
-    #events .swiper-button-next {
-      background-color: var(--surface-color);
-      border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      opacity: 0;
-      transition: opacity 0.3s ease, background-color 0.25s ease;
-      --swiper-navigation-size: 14px;
-      --swiper-navigation-color: var(--default-color);
-    }
-
-    #events .events-row:hover .swiper-button-prev,
-    #events .events-row:hover .swiper-button-next {
-      opacity: 1;
-    }
-
-    #events .swiper-button-prev:hover,
-    #events .swiper-button-next:hover {
-      background-color: var(--accent-color) !important;
-      border-color: var(--accent-color);
-      --swiper-navigation-color: #fff;
-    }
-
-    #events .swiper-button-disabled {
-      opacity: 0 !important;
-      pointer-events: none;
-    }
-
-    #events .events-slide-item {
-      overflow: hidden;
-      border-radius: 8px;
-      position: relative;
-    }
-
-    #events .events-slide-item img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    #events .events-slide-item:hover img {
-      transform: scale(1.05);
-    }
-
-    #events .events-slide-info {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
-      padding: 32px 16px 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-
-    #events .events-slide-info p {
-      color: #fff;
-      margin: 0;
-      font-weight: 500;
-      font-size: 0.92rem;
-    }
-
-    #events .events-slide-info a {
-      color: rgba(255,255,255,0.85);
-      font-size: 18px;
-      line-height: 1;
-      flex-shrink: 0;
-      margin-left: 8px;
-      opacity: 0;
-      transition: opacity 0.25s ease;
-    }
-
-    #events .events-slide-item:hover .events-slide-info a {
-      opacity: 1;
-    }
-
-    #events .events-slide-info a:hover {
-      color: var(--accent-color);
-    }
-
-    /* About */
-    .about .about-photo {
-      display: block;
-      width: 100%;
-      max-width: 360px;
-      margin: 0 auto;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center 30%;
-      border-radius: 5px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (min-width: 992px) {
-      .about .about-photo-wrap {
-        position: relative;
-        height: 100%;
-        min-height: 300px;
-      }
-
-      .about .about-photo {
-        position: absolute;
-        inset: 0;
-        height: 100%;
-        max-width: none;
-        aspect-ratio: auto;
-      }
-    }
-
-    .about .about-intro p {
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 0.75rem;
-    }
-
-    .about .about-group {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 2rem 0 1rem;
-    }
-
-    .about .about-group:first-child {
-      margin-top: 0;
-    }
-
-    .about .about-intro + .about-group {
-      margin-top: 1.25rem;
-    }
-
-    .about .about-group span {
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent-color);
-      white-space: nowrap;
-    }
-
-    .about .about-group::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: color-mix(in srgb, var(--default-color), transparent 82%);
-    }
-
-    .about .about-card {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 24px 22px;
-      background: var(--surface-color);
-      border-radius: 5px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
-      transition: 0.3s;
-    }
-
-    .about .about-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-    }
-
-    .about .about-card i {
-      width: 52px;
-      height: 52px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      border-radius: 50%;
-      font-size: 22px;
-      color: var(--accent-color);
-      background: color-mix(in srgb, var(--accent-color), transparent 90%);
-      transition: 0.3s;
-    }
-
-    .about .about-card:hover i {
-      color: var(--contrast-color);
-      background: var(--accent-color);
-    }
-
-    .about .about-card h4 {
-      font-size: 17px;
-      font-weight: 700;
-      margin: 0 0 4px;
-      text-wrap: balance;
-    }
-
-    .about .about-card p {
-      font-size: 14px;
-      line-height: 22px;
-      margin: 0;
-      color: color-mix(in srgb, var(--default-color), transparent 20%);
-    }
-
-    .about .about-badge {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 3px 10px;
-      border-radius: 50px;
-      font-size: 11.5px;
-      font-weight: 600;
-      color: var(--accent-color);
-      background: color-mix(in srgb, var(--accent-color), transparent 90%);
-    }
-
-    .about .about-card--sm {
-      gap: 12px;
-      padding: 18px 16px;
-    }
-
-    .about .about-card--sm i {
-      width: 42px;
-      height: 42px;
-      font-size: 18px;
-    }
-
-    .about .about-card--sm h4 {
-      font-size: 15px;
-      margin: 0;
-    }
-  </style>
 </head>
 
 <body class="index-page">
-  <header id="header" class="header d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <header id="header" class="header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo">Đăng <em>Tình</em></a>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li>
-          <a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Trang chủ</span></a>
-        </li>
-        <li>
-          <a href="#about"><i class="bi bi-person navicon"></i><span>Giới thiệu</span></a>
-        </li>
-        <li>
-          <a href="#services"><i class="bi bi-file-earmark-text navicon"></i><span>Thành tích</span></a>
-        </li>
-        <li>
-          <a href="#chuyenmon"><i class="bi bi-mortarboard navicon"></i><span>Chuyên môn</span></a>
-        </li>
-        <li>
-          <a href="#events"><i class="bi bi-hdd-stack navicon"></i><span>Sự kiện</span></a>
-        </li>
-        <li>
-          <a href="#hinhanh"><i class="bi bi-images navicon"></i><span>Hình ảnh</span></a>
-        </li>
-        <li>
-          <a href="#facebook-posts"><i class="bi bi-newspaper navicon"></i><span>Tin tức</span></a>
-        </li>
-        <li>
-          <a href="#contact"><i class="bi bi-envelope navicon"></i><span>Đặt lịch</span></a>
-        </li>
-      </ul>
-    </nav>
+      <nav id="navmenu" class="navmenu" aria-label="Điều hướng chính">
+        <ul>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#services">Thành tích</a></li>
+          <li><a href="#chuyenmon">Chuyên môn</a></li>
+          <li><a href="#events">Sự kiện</a></li>
+          <li><a href="#hinhanh">Hình ảnh</a></li>
+          <li><a href="#facebook-posts">Tin tức</a></li>
+          <li><a href="#contact" class="btn-pill">Đặt lịch</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="header-toggle d-xl-none" aria-label="Mở menu" aria-controls="navmenu"
+        aria-expanded="false"><i class="bi bi-list"></i></button>
+    </div>
   </header>
 
   <main class="main">
     <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-      <img loading="lazy" src="assets/img/hero-bg.webp" alt="" />
+    <section id="hero" class="hero section">
+      <svg class="hero-vine" viewBox="0 0 760 300" fill="none" stroke="currentColor" stroke-width="1"
+        stroke-linecap="round" aria-hidden="true">
+        <path d="M-10 280C90 230 140 290 240 240S380 120 470 160 640 230 770 110" />
+        <path d="M240 240c-6-16-22-26-40-24 6 16 22 26 40 24z" />
+        <path d="M470 160c4-18 18-30 36-30-2 18-18 30-36 30z" />
+        <path d="M640 196c-10-12-26-16-40-10 10 12 26 16 40 10z" />
+      </svg>
 
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-start hero-content">
-          <div class="col-lg-9 col-xl-8">
-            <h1 class="hero-name">Nguyễn Đăng Tình</h1>
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6" data-aos="fade-up">
+            <p class="eyebrow hero-roles">
+              MC<span class="sep">·</span>Biên tập viên<span class="sep">·</span>Giảng viên kỹ năng mềm
+            </p>
+            <h1 class="hero-name">Nguyễn Đăng <em>Tình</em></h1>
             <p class="hero-tagline">
               Người kể chuyện bằng giọng nói, ngôn từ và những trải nghiệm thực tế.
             </p>
-            <p class="hero-roles">
-              MC<span class="sep">|</span>Biên tập viên<span class="sep">|</span>Giảng viên kỹ năng mềm
-            </p>
             <div class="hero-actions">
-              <a href="#contact" class="hero-btn hero-btn--primary">Đặt lịch ngay <i class="bi bi-arrow-right"></i></a>
+              <a href="#contact" class="btn-pill">Đặt lịch ngay <i class="bi bi-arrow-right"></i></a>
+              <a href="#events" class="btn-pill btn-pill--outline">Xem sự kiện</a>
             </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <figure class="hero-media">
+              <div class="arch">
+                <img src="assets/img/hero-bg.webp" alt="Nguyễn Đăng Tình dẫn chương trình" fetchpriority="high" />
+              </div>
+              <figcaption class="hero-quote">“Lắng nghe, kết nối và kể lại những điều có ý nghĩa.”</figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -898,7 +108,7 @@
     <section id="about" class="about section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Về Nguyễn Đăng Tình</h2>
+        <h2>Về Nguyễn Đăng <em>Tình</em></h2>
         <p>
           Một hành trình kể chuyện qua nhiều hình thức khác nhau
         </p>
@@ -907,7 +117,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="about-group"><span>Hoạt động chuyên môn</span></div>
-        <div class="row g-3 mb-4">
+        <div class="row g-4 stagger">
           <div class="col-md-4">
             <div class="about-card">
               <i class="bi bi-tv"></i>
@@ -937,13 +147,13 @@
           </div>
         </div>
 
-        <div class="row gy-4">
-          <div class="col-lg-3">
-            <div class="about-photo-wrap">
+        <div class="row gy-5 gx-lg-5 align-items-center mt-2">
+          <div class="col-lg-4">
+            <div class="about-media arch">
               <img loading="lazy" src="assets/img/profile-img-3.webp" class="about-photo" alt="Nguyễn Đăng Tình" />
             </div>
           </div>
-          <div class="col-lg-9">
+          <div class="col-lg-8">
             <div class="about-intro">
               <p>
                 Đến với nghề MC từ những sân khấu nhỏ và dần có cơ hội đồng hành cùng nhiều chương trình, sự kiện ở
@@ -993,7 +203,7 @@
         </div>
 
         <div class="about-group"><span>Học vấn</span></div>
-        <div class="row g-3">
+        <div class="row g-4 stagger">
           <div class="col-md-6 col-xl-3">
             <div class="about-card">
               <i class="bi bi-mortarboard"></i>
@@ -1038,10 +248,10 @@
     <!-- /About Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section">
+    <section id="services" class="services section light-background">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Thành Tích</h2>
+        <h2>Thành <em>Tích</em></h2>
       </div>
       <!-- End Section Title -->
 
@@ -1079,7 +289,7 @@
           <div class="swiper-wrapper pb-5">
             <!-- 1 -->
             <div class="swiper-slide">
-              <div class="service-item item-teal position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-trophy"></i>
                 </div>
@@ -1089,7 +299,7 @@
             </div>
             <!-- 2 -->
             <div class="swiper-slide">
-              <div class="service-item item-orange position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-award"></i>
                 </div>
@@ -1099,7 +309,7 @@
             </div>
             <!-- 3 -->
             <div class="swiper-slide">
-              <div class="service-item item-cyan position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-megaphone"></i>
                 </div>
@@ -1109,7 +319,7 @@
             </div>
             <!-- 4 -->
             <div class="swiper-slide">
-              <div class="service-item item-indigo position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-stars"></i>
                 </div>
@@ -1119,7 +329,7 @@
             </div>
             <!-- 5 -->
             <div class="swiper-slide">
-              <div class="service-item item-red position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-mortarboard"></i>
                 </div>
@@ -1130,7 +340,7 @@
             </div>
             <!-- 6 -->
             <div class="swiper-slide">
-              <div class="service-item item-orange position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-mic"></i>
                 </div>
@@ -1140,7 +350,7 @@
             </div>
             <!-- 7 -->
             <div class="swiper-slide">
-              <div class="service-item item-cyan position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-people"></i>
                 </div>
@@ -1150,7 +360,7 @@
             </div>
             <!-- 8 -->
             <div class="swiper-slide">
-              <div class="service-item item-teal position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-award"></i>
                 </div>
@@ -1160,7 +370,7 @@
             </div>
             <!-- 9 -->
             <div class="swiper-slide">
-              <div class="service-item item-indigo position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-bookmark-star"></i>
                 </div>
@@ -1170,7 +380,7 @@
             </div>
             <!-- 9 -->
             <div class="swiper-slide">
-              <div class="service-item item-red position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-heart"></i>
                 </div>
@@ -1180,7 +390,7 @@
             </div>
             <!-- 10 -->
             <div class="swiper-slide">
-              <div class="service-item item-orange position-relative h-100">
+              <div class="service-item position-relative h-100">
                 <div class="icon">
                   <i class="bi bi-person-badge"></i>
                 </div>
@@ -1198,7 +408,7 @@
     <section id="chuyenmon" class="services section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Đa dạng không gian kết nối</h2>
+        <h2>Đa dạng không gian <em>kết nối</em></h2>
         <p>
           Mỗi không gian là một câu chuyện, mỗi chương trình là một cơ hội để kết nối 
         </p>
@@ -1206,15 +416,14 @@
       <!-- End Section Title -->
 
       <div class="container">
-        <div class="row gy-4 justify-content-center">
+        <div class="row gy-4 justify-content-center stagger">
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <div>
-                <img loading="lazy" width="100%" style="height: 250px; object-fit: cover;"
-                  src="./assets/img/linhvuc/IMG_6977.webp" />
+            <div class="service-item position-relative">
+              <div class="service-img">
+                <img loading="lazy" src="./assets/img/linhvuc/IMG_6977.webp" alt="" />
               </div>
-              <a href="#" class="stretched-link">
-                <h3 class="px-4">Dẫn Chương Trình Sự Kiện</h3>
+              <a href="#contact" class="stretched-link">
+                <h3>Dẫn Chương Trình Sự Kiện</h3>
               </a>
               <div>
                 <p>
@@ -1223,40 +432,33 @@
                 </p>
               </div>
 
-              <div class="mt-2">
-                <ul style="
-                      list-style-type: none;
-                      padding-left: 0;
-                      text-align: left;
-                    ">
-                  <li class="mb-2">
+              <ul class="service-list">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Sự Kiện Hội Nghị & Kỷ Niệm</span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Tiệc Tất Niên</span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Lễ Hội Văn Hóa</span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Lễ Khai Trương</span>
                   </li>
                 </ul>
-              </div>
             </div>
           </div>
           <!-- End Service Item -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item item-cyan position-relative">
-              <div>
-                <img loading="lazy" width="100%" style="height: 250px; object-fit: cover;"
-                  src="./assets/img/linhvuc/IMG_7512.webp" />
+            <div class="service-item position-relative">
+              <div class="service-img">
+                <img loading="lazy" src="./assets/img/linhvuc/IMG_7512.webp" alt="" />
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Dẫn Chương Trình Truyền Hình</h3>
               </a>
               <div>
@@ -1266,40 +468,33 @@
                 </p>
               </div>
 
-              <div class="mt-2">
-                <ul style="
-                      list-style-type: none;
-                      padding-left: 0;
-                      text-align: left;
-                    ">
-                  <li class="mb-2">
+              <ul class="service-list">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Bản Tin</span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Phóng Sự</span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Talk Show</span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Livestream</span>
                   </li>
                 </ul>
-              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="service-item item-cyan position-relative">
-              <div>
-                <img loading="lazy" width="100%" style="height: 250px; object-fit: cover; object-position: center 15%;"
-                  src="./assets/img/linhvuc/cuoi.webp" />
+            <div class="service-item position-relative">
+              <div class="service-img">
+                <img loading="lazy" src="./assets/img/linhvuc/cuoi.webp" alt="" style="object-position: center 15%" />
               </div>
 
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Dẫn Chương Trình Tiệc Cưới</h3>
               </a>
 
@@ -1310,39 +505,32 @@
                 </p>
               </div>
 
-              <div class="mt-2">
-                <ul style="
-                      list-style-type: none;
-                      padding-left: 0;
-                      text-align: left;
-                    ">
-                  <li class="mb-2">
+              <ul class="service-list">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Lễ Thành Hôn</span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Lễ Vu Quy</span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Lễ Nạp Tài/Lễ Ăn Hỏi</span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Wedding Party</span>
                   </li>
                 </ul>
-              </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <div>
-                <img loading="lazy" width="100%" style="height: 250px; object-fit: cover;"
-                  src="./assets/img/linhvuc/IMG_0408.webp" />
+            <div class="service-item position-relative">
+              <div class="service-img">
+                <img loading="lazy" src="./assets/img/linhvuc/IMG_0408.webp" alt="" />
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Dẫn Chương Trình Teambuilding</h3>
               </a>
               <div>
@@ -1352,41 +540,34 @@
                 </p>
               </div>
 
-              <div class="mt-2">
-                <ul style="
-                      list-style-type: none;
-                      padding-left: 0;
-                      text-align: left;
-                    ">
-                  <li class="mb-2">
+              <ul class="service-list">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Teambuilding Trường Học </span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Teambuilding Doanh Nghiệp </span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Ngày Hội Gia Đình </span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Trò Chơi Nhóm Tương Tác </span>
                   </li>
                 </ul>
-              </div>
             </div>
           </div>
           <!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <div>
-                <img loading="lazy" width="100%" style="height: 250px; object-fit: cover;"
-                  src="./assets/img/linhvuc/IMG_7561.webp" />
+            <div class="service-item position-relative">
+              <div class="service-img">
+                <img loading="lazy" src="./assets/img/linhvuc/IMG_7561.webp" alt="" />
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#contact" class="stretched-link">
                 <h3>Kích Hoạt Thương Hiệu</h3>
               </a>
               <div>
@@ -1396,30 +577,24 @@
                 </p>
               </div>
 
-              <div class="mt-2">
-                <ul style="
-                      list-style-type: none;
-                      padding-left: 0;
-                      text-align: left;
-                    ">
-                  <li class="mb-2">
+              <ul class="service-list">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Ra Mắt Sản Phẩm </span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Sự Kiện Quảng Bá </span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Hội Chợ & Triển Lãm </span>
                   </li>
-                  <li class="mb-2">
+                  <li>
                     <i class="bi bi-chevron-right"></i>
                     <span>Kích Hoạt Thương Hiệu Trực Tuyến </span>
                   </li>
                 </ul>
-              </div>
             </div>
           </div>
           <!-- End Service Item -->
@@ -1429,10 +604,10 @@
     <!-- /Services Section -->
 
     <!-- Events Section -->
-    <section id="events" class="portfolio section">
+    <section id="events" class="portfolio section light-background">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Sự Kiện Tiêu Biểu</h2>
+        <h2>Sự Kiện <em>Tiêu Biểu</em></h2>
         <p>Khám phá một số sự kiện tiêu biểu mà tôi đã có cơ hội dẫn dắt</p>
       </div>
       <!-- End Section Title -->
@@ -1574,7 +749,7 @@
     <section id="hinhanh" class="portfolio section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Hình ảnh &amp; Video</h2>
+        <h2>Hình ảnh &amp; <em>Video</em></h2>
         <p>
           Những khoảnh khắc trên sân khấu, trước ống kính, trên giảng đường và trong suốt hành trình làm nghề. 
         </p>
@@ -1583,10 +758,10 @@
 
       <div class="container">
         <!-- Custom Tab Buttons -->
-        <ul class="hinhanh-tab-btns" data-aos="fade-up" data-aos-delay="100">
-          <li class="tab-active" data-tab="tab-images">Hình ảnh</li>
-          <li data-tab="tab-videos">Video</li>
-        </ul>
+        <div class="hinhanh-tab-btns" data-aos="fade-up" data-aos-delay="100">
+          <button type="button" class="tab-active" data-tab="tab-images" aria-pressed="true">Hình ảnh</button>
+          <button type="button" data-tab="tab-videos" aria-pressed="false">Video</button>
+        </div>
 
         <!-- Tab: Images (Swiper) -->
         <div id="tab-images" class="hinhanh-tab-content tab-visible" data-aos="fade-up" data-aos-delay="200">
@@ -1597,7 +772,7 @@
                 "speed": 600,
                 "autoplay": { "delay": 4000 },
                 "slidesPerView": "auto",
-                "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true },
+                "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true, "dynamicBullets": true },
                 "breakpoints": {
                   "320": { "slidesPerView": 1, "spaceBetween": 10 },
                   "768": { "slidesPerView": 2, "spaceBetween": 15 },
@@ -2163,10 +1338,10 @@
     <!-- /Portfolio Section -->
 
     <!-- Facebook Posts Section -->
-    <section id="facebook-posts" class="facebook-posts section">
+    <section id="facebook-posts" class="facebook-posts section light-background">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Tin Tức & Hoạt Động</h2>
+        <h2>Tin Tức &amp; <em>Hoạt Động</em></h2>
         <p>Cập nhật những hoạt động và tin tức mới nhất từ Đăng Tình</p>
       </div>
       <!-- End Section Title -->
@@ -2181,7 +1356,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1540415708088295%26set%3Da.497994175663792%26type%3D3&show_text=true&width=500"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2190,7 +1365,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/video.php?height=321&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1658949671803190%2F&show_text=true&width=560&t=0"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2199,7 +1374,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1498844991186759%2F&show_text=true&width=560&t=0"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2208,7 +1383,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdangtinh199%2Fposts%2Fpfbid032i4iUfKFwWeM6mRDj4qWrEZz7C5wyx9oEAEr6cqDtZQ7gqqkfSF12qxNtbwjM5m8l&show_text=true&width=500"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2217,7 +1392,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/video.php?height=324&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2214822249359918%2F&show_text=true&width=560&t=0"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2226,7 +1401,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdangtinh199%2Fposts%2Fpfbid0CSTukVarcuKs2JvsgxUwF95SdaKms3J7tsg2t3wmD4JnPZjKGY5v9wTvt7L4K3Sal&show_text=true&width=500"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2235,7 +1410,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1008409525082596%26set%3Da.181156431141247%26type%3D3&show_text=true&width=500"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2243,7 +1418,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1422561032774139%2F&show_text=true&t=0"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2251,7 +1426,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1460643575467494%26set%3Da.597351921796668%26type%3D3&show_text=true"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2259,7 +1434,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdangtinh199%2Fposts%2Fpfbid0mHk9b9ULbJX7gr4q4fvusWKF3iMGp2YBDwDLNFJLKVcx7PZPRaa6oME2vZUnggF7l&show_text=true"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2267,7 +1442,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdangtinh199%2Fposts%2Fpfbid0bkpBtGtW6aCsHjZ5rAnRMNgKQ7sXKDDUG5VJmELNdhoebgnVAHr8Tthp1B7o3mEyl&show_text=true"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2275,7 +1450,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdangtinh199%2Fposts%2Fpfbid0LN8Yqfghbxdggu9PBm1GL3yHoLV4fLUQZ3o367ykWFEKuGUx9uYEtReJk8HWNkSvl&show_text=true"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2283,7 +1458,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FSTLighthouse%2Fposts%2Fpfbid036LgKPgX8VyydXrVo43Bfj3rchUSjp8m6ZZBRPHxYkK88A25rJQSfTcJynjNtSqAvl&show_text=true"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2291,7 +1466,7 @@
             <div class="facebook-post-item">
               <iframe
                 data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdangtinh199%2Fposts%2Fpfbid02S5kKZspFtUGTfDQFedQ9hm1fyDeymkV4Jkqg8yRjxQJt889DEuZkeC6atU7U3FMrl&show_text=true"
-                width="100%" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                width="100%" height="500" scrolling="no" frameborder="0"
                 allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen="true" loading="lazy">
               </iframe>
@@ -2309,73 +1484,60 @@
     <section id="contact" class="contact section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Trao đổi về chương trình của bạn</h2>
+        <h2>Trao đổi về <em>chương trình</em> của bạn</h2>
       </div>
       <!-- End Section Title -->
 
       <div class="container" data-aos="fade" data-aos-delay="0">
         <div class="row gy-5 align-items-center">
 
-          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
-            <h3 style="font-weight: 700; color: var(--heading-color); margin-bottom: 20px; font-size: 2rem;">Từ một ý
-              tưởng đến một chương trình trọn vẹn</h3>
-            <p style="color: var(--default-color); font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+          <div class="col-lg-5 contact-intro" data-aos="fade-right" data-aos-delay="100">
+            <h3>Từ một ý tưởng đến một chương trình <em>trọn vẹn</em></h3>
+            <p>
               Mỗi chương trình đều có những mong muốn, kỳ vọng và câu chuyện riêng phía sau.
             </p>
-            <p style="color: var(--default-color); font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+            <p>
               Nếu bạn đang tìm kiếm một người đồng hành cho sự kiện sắp tới, hãy để lại thông tin bên cạnh. Tôi sẽ chủ động liên hệ để cùng trao đổi về ý tưởng, nội dung và những điều bạn mong muốn gửi gắm tới khách mời.
             </p>
-            <ul class="list-unstyled" style="font-size: 1.05rem; line-height: 2.2;">
-              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Trao đổi trực tiếp để hiểu rõ nhu cầu chương trình
-              </li>
-              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Hỗ trợ xây dựng nội dung và kịch bản phù hợp</li>
-              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Linh
-                hoạt với nhiều loại hình sự kiện</li>
-              <li><i class="bi bi-check-circle-fill" style="color: var(--accent-color); margin-right: 10px;"></i> Đồng hành từ khâu chuẩn bị đến khi chương trình khép lại</li>
+            <ul class="contact-checklist">
+              <li><i class="bi bi-check2"></i> Trao đổi trực tiếp để hiểu rõ nhu cầu chương trình</li>
+              <li><i class="bi bi-check2"></i> Hỗ trợ xây dựng nội dung và kịch bản phù hợp</li>
+              <li><i class="bi bi-check2"></i> Linh hoạt với nhiều loại hình sự kiện</li>
+              <li><i class="bi bi-check2"></i> Đồng hành từ khâu chuẩn bị đến khi chương trình khép lại</li>
             </ul>
           </div>
 
           <div class="col-lg-7">
-            <div class="booking-form-wrapper"
-              style="background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 15px 30px rgba(0,0,0,0.08);"
-              data-aos="fade-left" data-aos-delay="200">
+            <div class="booking-card" data-aos="fade-left" data-aos-delay="200">
               <form action="https://formspree.io/f/mpwrbrra" method="post" class="php-email-form">
-                <div class="row gy-4">
+                <div class="row gy-3">
                   <div class="col-md-12">
-                    <input type="text" name="name" class="form-control" placeholder="Tên của bạn *" required=""
-                      style="padding: 12px 15px; border-radius: 8px; border: 1px solid #dee2e6;" />
-                  </div>
-
-                  <div class="col-md-6">
-                    <input type="tel" class="form-control" name="phone" placeholder="Số điện thoại *" required=""
-                      style="padding: 12px 15px; border-radius: 8px; border: 1px solid #dee2e6;" />
+                    <input type="text" name="name" class="form-control" placeholder="Tên của bạn *" aria-label="Tên của bạn"
+                      required />
                   </div>
                   <div class="col-md-6">
-                    <input type="email" class="form-control" name="email" placeholder="Email của bạn *" required=""
-                      style="padding: 12px 15px; border-radius: 8px; border: 1px solid #dee2e6;" />
+                    <input type="tel" class="form-control" name="phone" placeholder="Số điện thoại *"
+                      aria-label="Số điện thoại" required />
                   </div>
                   <div class="col-md-6">
-                    <select name="event_type" class="form-control" required
-                      style="padding: 12px 15px; border-radius: 8px; border: 1px solid #dee2e6;">
-                      <option value="" disabled selected>
-                        Chọn loại sự kiện *
-                      </option>
+                    <input type="email" class="form-control" name="email" placeholder="Email của bạn *"
+                      aria-label="Email của bạn" required />
+                  </div>
+                  <div class="col-md-6">
+                    <select name="event_type" class="form-select" aria-label="Loại sự kiện" required>
+                      <option value="" disabled selected>Chọn loại sự kiện *</option>
                       <option value="Sự kiện">Sự kiện</option>
                       <option value="Team building">Team building</option>
-                      <option value="Kích hoạt thương hiệu">
-                        Kích hoạt thương hiệu
-                      </option>
+                      <option value="Kích hoạt thương hiệu">Kích hoạt thương hiệu</option>
                     </select>
                   </div>
-                  <!-- Ngày sự kiện -->
                   <div class="col-md-6">
-                    <input type="date" name="event_date" class="form-control" required
-                      style="padding: 12px 15px; border-radius: 8px; border: 1px solid #dee2e6;" />
+                    <input type="date" name="event_date" class="form-control" aria-label="Ngày sự kiện" required />
                   </div>
                   <div class="col-md-12">
                     <textarea class="form-control" name="message" rows="5"
-                      placeholder="Thông tin bổ sung về sự kiện (Địa điểm, quy mô, yêu cầu...)" required=""
-                      style="padding: 12px 15px; border-radius: 8px; border: 1px solid #dee2e6;"></textarea>
+                      placeholder="Thông tin bổ sung về sự kiện (Địa điểm, quy mô, yêu cầu...)"
+                      aria-label="Thông tin bổ sung về sự kiện" required></textarea>
                   </div>
 
                   <div class="col-md-12 text-center mt-4">
@@ -2385,8 +1547,7 @@
                       Your message has been sent. Thank you!
                     </div>
 
-                    <button type="submit"
-                      style="background: var(--accent-color); border: 0; padding: 14px 40px; color: #fff; transition: 0.4s; border-radius: 50px; font-weight: 600; font-size: 1.1rem; width: 100%;">GỬI THÔNG TIN</button>
+                    <button type="submit" class="btn-pill w-100">Gửi thông tin <i class="bi bi-arrow-right"></i></button>
                   </div>
                 </div>
               </form>
@@ -2399,138 +1560,45 @@
     <!-- /Contact Section -->
   </main>
 
-  <footer id="footer" class="footer position-relative"
-    style="background-color: #121212; color: #ffffff; padding: 40px 0 20px;">
-    <style>
-      .footer-logo {
-        max-width: 180px;
-        margin-bottom: 20px;
-      }
-
-      .social-icon-vertical {
-        display: inline-flex;
-        align-items: center;
-        gap: 15px;
-        color: #e0e0e0;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        margin-bottom: 12px;
-        font-size: 1.05rem;
-      }
-
-      .social-icon-vertical i {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.05);
-        font-size: 16px;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .social-icon-vertical:hover {
-        color: var(--accent-color);
-      }
-
-      .social-icon-vertical:hover i {
-        background-color: var(--accent-color);
-        color: #fff;
-        transform: translateY(-3px);
-        border-color: var(--accent-color);
-      }
-
-      .footer-map iframe {
-        width: 100%;
-        height: 200px;
-        border-radius: 8px;
-        border: none;
-      }
-
-      @media (max-width: 991px) {
-        .footer-col {
-          margin-bottom: 30px;
-          text-align: center;
-        }
-
-        .middle-col {
-          align-items: center !important;
-        }
-      }
-    </style>
+  <footer id="footer" class="footer dark-background">
     <div class="container">
-      <div class="row align-items-center">
-        <!-- Cột 1: Logo -->
-        <div class="col-lg-3 col-md-6 footer-col text-lg-start">
-          <img src="assets/img/logo.webp" alt="MC Đăng Tình Logo" class="footer-logo"
-            style="margin-bottom: 15px; max-width: 140px;">
-          <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.5; margin-bottom: 0;">
+      <div class="row gy-5">
+        <div class="col-lg-3 col-md-6">
+          <img src="assets/img/logo.webp" alt="MC Đăng Tình Logo" class="footer-logo" />
+          <p class="footer-text">
             Đồng hành cùng bạn tạo nên những sự kiện thành công và những khoảnh khắc đáng nhớ.
           </p>
         </div>
 
-        <!-- Cột 2: Liên hệ -->
-        <div class="col-lg-3 col-md-6 footer-col d-flex flex-column align-items-lg-center">
-          <div class="d-flex flex-column align-items-start text-start">
-            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: #fff;">Liên hệ</h4>
-            <div class="d-flex align-items-center mb-3" style="color: #a0a0a0; font-size: 0.95rem;">
-              <i class="bi bi-telephone" style="font-size: 1.2rem; color: var(--accent-color); margin-right: 10px;"></i>
-              085 668 0333
-            </div>
-            <div class="d-flex align-items-center mb-3" style="color: #a0a0a0; font-size: 0.95rem;">
-              <i class="bi bi-envelope" style="font-size: 1.2rem; color: var(--accent-color); margin-right: 10px;"></i>
-              dangtinhforwork@gmail.com
-            </div>
-            <div class="d-flex align-items-center mb-3" style="color: #a0a0a0; font-size: 0.95rem;">
-              <i class="bi bi-geo-alt" style="font-size: 1.2rem; color: var(--accent-color); margin-right: 10px;"></i>
-              Hà Nội, Việt Nam
-            </div>
-            <div class="d-flex align-items-center mb-3" style="color: #a0a0a0; font-size: 0.95rem;">
-              <i class="bi bi-calendar-check"
-                style="font-size: 1.2rem; color: var(--accent-color); margin-right: 10px;"></i>
-              Thứ Hai - Chủ Nhật: 8:00 - 22:00
-            </div>
+        <div class="col-lg-3 col-md-6">
+          <h4>Liên hệ</h4>
+          <ul class="footer-contact">
+            <li><i class="bi bi-telephone"></i> 085 668 0333</li>
+            <li><i class="bi bi-envelope"></i> dangtinhforwork@gmail.com</li>
+            <li><i class="bi bi-geo-alt"></i> Hà Nội, Việt Nam</li>
+            <li><i class="bi bi-calendar-check"></i> Thứ Hai - Chủ Nhật: 8:00 - 22:00</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4>Kết nối với tôi</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/dangtinh199/" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Facebook</a>
+            <a href="https://www.youtube.com/@mcdangtinh" target="_blank" rel="noopener"><i class="bi bi-youtube"></i> YouTube</a>
+            <a href="https://www.tiktok.com/@mcdangtinh" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i> TikTok</a>
+            <a href="https://www.instagram.com/dangtinh199/" target="_blank" rel="noopener"><i class="bi bi-instagram"></i> Instagram</a>
           </div>
         </div>
 
-        <!-- Cột 3: Social Icons dọc -->
-        <div class="col-lg-3 col-md-6 footer-col middle-col d-flex flex-column align-items-lg-center">
-          <div class="d-flex flex-column align-items-start text-start">
-            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: #fff;">Kết nối với tôi</h4>
-            <a href="https://www.facebook.com/dangtinh199/" target="_blank" class="social-icon-vertical">
-              <i class="bi bi-facebook"></i> Facebook
-            </a>
-            <a href="https://www.youtube.com/@mcdangtinh" target="_blank" class="social-icon-vertical">
-              <i class="bi bi-youtube"></i> YouTube
-            </a>
-            <a href="https://www.tiktok.com/@mcdangtinh" target="_blank" class="social-icon-vertical">
-              <i class="bi bi-tiktok"></i> TikTok
-            </a>
-            <a href="https://www.instagram.com/dangtinh199/" target="_blank" class="social-icon-vertical">
-              <i class="bi bi-instagram"></i> Instagram
-            </a>
-          </div>
-        </div>
-
-        <!-- Cột 4: Map -->
-        <div class="col-lg-3 col-md-6 footer-col footer-map">
-          <iframe
+        <div class="col-lg-3 col-md-6 footer-map">
+          <iframe title="Bản đồ khu vực Hà Nội"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1837.7425512699547!2d105.70269170495841!3d21.073937647831453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455cc339fe995%3A0x4aa9cffc6cd5743d!2zS2h1IMSQw7QgVGjhu4sgVMOibiBUw6J5IMSQw7Q!5e0!3m2!1svi!2s!4v1780815386129!5m2!1svi!2s"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col-12">
-          <div class="copyright pt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
-            <p style="color: #777; font-size: 0.9rem; margin-bottom: 0;">
-              &copy; <strong><span>MC Đăng Tình</span></strong>. All Rights Reserved.
-            </p>
-          </div>
-        </div>
+      <div class="copyright">
+        &copy; <strong>MC Đăng Tình</strong>. All Rights Reserved.
       </div>
     </div>
   </footer>

@@ -15,9 +15,11 @@
   const headerToggleBtn = document.querySelector('.header-toggle');
 
   function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
+    const open = document.querySelector('#header').classList.toggle('header-show');
+    headerToggleBtn.setAttribute('aria-expanded', open);
+    headerToggleBtn.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
+    headerToggleBtn.querySelector('i').classList.toggle('bi-list');
+    headerToggleBtn.querySelector('i').classList.toggle('bi-x');
   }
   headerToggleBtn.addEventListener('click', headerToggle);
 
@@ -81,8 +83,8 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
+      duration: 700,
+      easing: 'ease-out-cubic',
       once: true,
       mirror: false
     });
@@ -244,12 +246,16 @@
   /**
    * Hinhanh Tab Switching
    */
-  document.querySelectorAll('#hinhanh .hinhanh-tab-btns li').forEach(tabBtn => {
+  document.querySelectorAll('#hinhanh .hinhanh-tab-btns button').forEach(tabBtn => {
     tabBtn.addEventListener('click', function() {
-      // Remove active class from all buttons
-      document.querySelectorAll('#hinhanh .hinhanh-tab-btns li').forEach(btn => btn.classList.remove('tab-active'));
-      // Add active class to clicked button
+      // Remove active state from all buttons
+      document.querySelectorAll('#hinhanh .hinhanh-tab-btns button').forEach(btn => {
+        btn.classList.remove('tab-active');
+        btn.setAttribute('aria-pressed', 'false');
+      });
+      // Mark clicked button active
       this.classList.add('tab-active');
+      this.setAttribute('aria-pressed', 'true');
       
       // Hide all tab contents
       document.querySelectorAll('#hinhanh .hinhanh-tab-content').forEach(content => content.classList.remove('tab-visible'));
