@@ -32,7 +32,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css?v=20261017" rel="stylesheet" />
+  <link href="assets/css/main.css?v=20261019" rel="stylesheet" />
 
   <!-- =======================================================
   * Template Name: MyResume
@@ -79,10 +79,12 @@
       <div class="container">
         <div class="row align-items-center gy-5">
           <div class="col-lg-6" data-aos="fade-up">
-            <p class="eyebrow hero-roles">
-              MC<span class="sep">·</span>Biên tập viên<span class="sep">·</span>Giảng viên kỹ năng mềm
-            </p>
             <h1 class="hero-name">Nguyễn Đăng <em>Tình</em></h1>
+            <ul class="hero-roles">
+              <li><i class="bi bi-mic"></i> MC</li>
+              <li><i class="bi bi-pencil-square"></i> Biên tập viên</li>
+              <li><i class="bi bi-easel2"></i> Giảng viên kỹ năng mềm</li>
+            </ul>
             <p class="hero-tagline">
               Người kể chuyện bằng giọng nói, ngôn từ và những trải nghiệm thực tế.
             </p>
@@ -96,6 +98,11 @@
               <div class="arch">
                 <img src="assets/img/hero-portrait.webp" alt="Nguyễn Đăng Tình" fetchpriority="high" />
               </div>
+              <div class="hero-seal">
+                <i class="bi bi-trophy"></i>
+                <strong>Quán quân</strong>
+                <span>MC Truyền hình 2025</span>
+              </div>
               <figcaption class="hero-quote">“Lắng nghe, kết nối và kể lại những điều có ý nghĩa.”</figcaption>
             </figure>
           </div>
@@ -103,6 +110,17 @@
       </div>
     </section>
     <!-- /Hero Section -->
+
+    <!-- Credentials Band -->
+    <section class="partners light-background" aria-labelledby="partners-label">
+      <div class="container partners-inner">
+        <p id="partners-label" class="eyebrow">Đã đồng hành cùng</p>
+        <div class="marquee">
+          <ul class="marquee-track"><li>TTV Thanh Hóa</li><li>ST Lighthouse</li><li>Tạp chí Nông nghiệp và Môi trường</li><li>Honda</li><li>Oishi</li><li>ACE Foods</li><li>Cuckoo</li><li>Vinschool</li><li>Đại học Bách khoa Hà Nội</li><li>Đại học Kinh tế Quốc dân</li><li>Đại học Công nghiệp Hà Nội</li></ul>
+          <ul class="marquee-track" aria-hidden="true"><li>TTV Thanh Hóa</li><li>ST Lighthouse</li><li>Tạp chí Nông nghiệp và Môi trường</li><li>Honda</li><li>Oishi</li><li>ACE Foods</li><li>Cuckoo</li><li>Vinschool</li><li>Đại học Bách khoa Hà Nội</li><li>Đại học Kinh tế Quốc dân</li><li>Đại học Công nghiệp Hà Nội</li></ul>
+        </div>
+      </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -116,33 +134,26 @@
       <!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="about-group"><span>Hoạt động chuyên môn</span></div>
-        <div class="row g-4 stagger">
-          <div class="col-md-4">
-            <div class="about-card">
+        <div class="role-panel dark-background">
+          <h3 class="role-panel-title">Hoạt động <em>chuyên môn</em></h3>
+          <div class="row g-0">
+            <div class="col-md-4 role">
+              <span class="role-index">01</span>
               <i class="bi bi-tv"></i>
-              <div>
-                <h4>MC</h4>
-                <p>TTV – Báo và Phát thanh, Truyền hình Thanh Hóa</p>
-              </div>
+              <h4>MC</h4>
+              <p>TTV – Báo và Phát thanh, Truyền hình Thanh Hóa</p>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="about-card">
+            <div class="col-md-4 role">
+              <span class="role-index">02</span>
               <i class="bi bi-easel2"></i>
-              <div>
-                <h4>Giảng viên</h4>
-                <p>Học viện kỹ năng mềm ST Lighthouse</p>
-              </div>
+              <h4>Giảng viên</h4>
+              <p>Học viện kỹ năng mềm ST Lighthouse</p>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="about-card">
+            <div class="col-md-4 role">
+              <span class="role-index">03</span>
               <i class="bi bi-journal-text"></i>
-              <div>
-                <h4>Nguyên phóng viên</h4>
-                <p>Tạp chí Nông nghiệp và Môi trường – Bộ Nông nghiệp và Môi trường</p>
-              </div>
+              <h4>Nguyên phóng viên</h4>
+              <p>Tạp chí Nông nghiệp và Môi trường – Bộ Nông nghiệp và Môi trường</p>
             </div>
           </div>
         </div>
@@ -248,158 +259,113 @@
     <!-- /About Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section light-background">
+    <section id="services" class="section light-background">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Thành <em>Tích</em></h2>
       </div>
       <!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 20
-                  },
-                  "768": {
-                    "slidesPerView": 2,
-                    "spaceBetween": 20
-                  },
-                  "1200": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 20
-                  }
-                }
-              }
-            </script>
-          <div class="swiper-wrapper pb-5">
-            <!-- 1 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-trophy"></i>
-                </div>
-                <h3>Quán quân MC Truyền hình 2025</h3>
-                <p>Quán quân MC Truyền hình 2025 – Học viện Kỹ năng mềm ST Lighthouse.</p>
+      <div class="container">
+        <div class="row g-4 g-xl-5">
+          <div class="col-lg-5" data-aos="fade-up">
+            <article class="award-feature dark-background">
+              <i class="bi bi-trophy"></i>
+              <p class="eyebrow">Thành tích nổi bật</p>
+              <h3>Quán quân <em>MC Truyền hình</em></h3>
+              <p class="award-feature-org">Học viện Kỹ năng mềm ST Lighthouse</p>
+              <span class="award-feature-year">2025</span>
+            </article>
+            <div class="row g-3 mt-0">
+              <div class="col-sm-6">
+                <article class="award-highlight">
+                  <div class="award-highlight-top">
+                    <i class="bi bi-award"></i>
+                    <span class="award-year">2026</span>
+                  </div>
+                  <h4>Mentor Quán quân On The Mic</h4>
+                  <p>Đại học Bách khoa Hà Nội</p>
+                </article>
               </div>
-            </div>
-            <!-- 2 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-award"></i>
-                </div>
-                <h3>Mentor Quán quân On The Mic 2026</h3>
-                <p>Mentor thí sinh đạt Quán quân cuộc thi MC On The Mic 2026 – Đại học Bách khoa Hà Nội.</p>
-              </div>
-            </div>
-            <!-- 3 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-megaphone"></i>
-                </div>
-                <h3>Đại sứ truyền thông MC Spotlight</h3>
-                <p>Đại sứ truyền thông cuộc thi MC Spotlight – Đại học Kinh tế Quốc dân.</p>
-              </div>
-            </div>
-            <!-- 4 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-stars"></i>
-                </div>
-                <h3>Ngôi sao kết nối 2025</h3>
-                <p>Danh hiệu Ngôi sao kết nối 2025 – ST Lighthouse.</p>
-              </div>
-            </div>
-            <!-- 5 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-mortarboard"></i>
-                </div>
-                <h3>Mentor Lễ tốt nghiệp MC</h3>
-                <p>Mentor các Lễ tốt nghiệp khóa MC Cơ bản và MC Chuyên nghiệp tại Học viện Kỹ năng mềm ST Lighthouse.
-                </p>
-              </div>
-            </div>
-            <!-- 6 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-mic"></i>
-                </div>
-                <h3>Top 20 MC Volunteer 2024</h3>
-                <p>Đạt Top 20 chung cuộc tại cuộc thi MC Volunteer 2024.</p>
-              </div>
-            </div>
-            <!-- 7 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-people"></i>
-                </div>
-                <h3>Supporter Hi MC 2026</h3>
-                <p>Supporter tại Hi MC – Cuộc thi tìm kiếm cặp đôi dẫn chương trình tài năng 2026.</p>
-              </div>
-            </div>
-            <!-- 8 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-award"></i>
-                </div>
-                <h3>Cuộc thi chính luận 2026</h3>
-                <p>Giải Khuyến khích “Cuộc thi chính luận về bảo vệ nền tảng tư tưởng của Đảng lần thứ 2, năm 2026” do Đảng ủy Chính phủ tổ chức.</p>
-              </div>
-            </div>
-            <!-- 9 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-bookmark-star"></i>
-                </div>
-                <h3>Sinh viên NCKH</h3>
-                <p>Giải Khuyến khích Sinh viên Nghiên cứu Khoa học – Đại học Công nghiệp Hà Nội.</p>
-              </div>
-            </div>
-            <!-- 9 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-heart"></i>
-                </div>
-                <h3>Hoạt động tình nguyện</h3>
-                <p>Khen thưởng Tình nguyện Mùa Đông 2022 & Xuân Tình nguyện 2023.</p>
-              </div>
-            </div>
-            <!-- 10 -->
-            <div class="swiper-slide">
-              <div class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-person-badge"></i>
-                </div>
-                <h3>Nét đẹp học đường</h3>
-                <p>Giải Nhì cuộc thi Nét đẹp học đường – Trường Kinh doanh CEO Việt Nam.</p>
+              <div class="col-sm-6">
+                <article class="award-highlight">
+                  <div class="award-highlight-top">
+                    <i class="bi bi-megaphone"></i>
+                  </div>
+                  <h4>Đại sứ truyền thông MC Spotlight</h4>
+                  <p>Đại học Kinh tế Quốc dân</p>
+                </article>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <ul class="award-list">
+            <li>
+              <i class="bi bi-stars"></i>
+              <div>
+                <h4>Ngôi sao kết nối</h4>
+                <p>Danh hiệu Ngôi sao kết nối 2025 – ST Lighthouse.</p>
+              </div>
+              <span class="award-year">2025</span>
+            </li>
+            <li>
+              <i class="bi bi-mortarboard"></i>
+              <div>
+                <h4>Mentor Lễ tốt nghiệp MC</h4>
+                <p>Mentor các Lễ tốt nghiệp khóa MC Cơ bản và MC Chuyên nghiệp tại Học viện Kỹ năng mềm ST Lighthouse.</p>
+              </div>
+              
+            </li>
+            <li>
+              <i class="bi bi-mic"></i>
+              <div>
+                <h4>Top 20 MC Volunteer</h4>
+                <p>Đạt Top 20 chung cuộc tại cuộc thi MC Volunteer 2024.</p>
+              </div>
+              <span class="award-year">2024</span>
+            </li>
+            <li>
+              <i class="bi bi-people"></i>
+              <div>
+                <h4>Supporter Hi MC</h4>
+                <p>Supporter tại Hi MC – Cuộc thi tìm kiếm cặp đôi dẫn chương trình tài năng 2026.</p>
+              </div>
+              <span class="award-year">2026</span>
+            </li>
+            <li>
+              <i class="bi bi-award"></i>
+              <div>
+                <h4>Cuộc thi chính luận</h4>
+                <p>Giải Khuyến khích “Cuộc thi chính luận về bảo vệ nền tảng tư tưởng của Đảng lần thứ 2, năm 2026” do Đảng ủy Chính phủ tổ chức.</p>
+              </div>
+              <span class="award-year">2026</span>
+            </li>
+            <li>
+              <i class="bi bi-bookmark-star"></i>
+              <div>
+                <h4>Sinh viên Nghiên cứu Khoa học</h4>
+                <p>Giải Khuyến khích Sinh viên Nghiên cứu Khoa học – Đại học Công nghiệp Hà Nội.</p>
+              </div>
+              
+            </li>
+            <li>
+              <i class="bi bi-heart"></i>
+              <div>
+                <h4>Hoạt động tình nguyện</h4>
+                <p>Khen thưởng Tình nguyện Mùa Đông 2022 &amp; Xuân Tình nguyện 2023.</p>
+              </div>
+              <span class="award-year">2022–23</span>
+            </li>
+            <li>
+              <i class="bi bi-person-badge"></i>
+              <div>
+                <h4>Nét đẹp học đường</h4>
+                <p>Giải Nhì cuộc thi Nét đẹp học đường – Trường Kinh doanh CEO Việt Nam.</p>
+              </div>
+              
+            </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
